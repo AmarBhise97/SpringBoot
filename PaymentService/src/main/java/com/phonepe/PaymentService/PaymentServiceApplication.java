@@ -1,11 +1,13 @@
 package com.phonepe.PaymentService;
 
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 import com.phonepe.PaymentService.Demo.Googlepe;
 import com.phonepe.PaymentService.Demo.Makepayment;
+
 
 
 
@@ -31,6 +33,9 @@ public class PaymentServiceApplication {
 		Googlepe gp = context.getBean(Googlepe.class);
 		
 		gp.doPayment();
+		
+		
+		
 		
 		
 	}

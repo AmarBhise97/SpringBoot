@@ -21,7 +21,7 @@ public class StudentCalculation {
 		
 	}
 	@PostMapping("/add2")
-	public String add2( @RequestParam String str) {
+	public String add2( @RequestParam(required = false) String str) {
 		System.out.println(str.toUpperCase());
 		System.out.println(str.toLowerCase());
 		System.out.println(str.hashCode());

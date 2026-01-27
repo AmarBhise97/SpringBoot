@@ -5,7 +5,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
+/**
+ * using @RequestParam............
+ * using Required=false
+ * using set[ value = "de" ].
+ * 
+ */
 @RestController
 @RequestMapping("/Student")
 public class Studentservice {

@@ -14,16 +14,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.student.Studentmanagment.ent.Stud;
 
 
-
-
-
-
-
-
-
-
-
-
 /**
  * using @PathVariable.(value="na').
  * 

@@ -27,13 +27,18 @@ public class PaymentServiceApplication {
 //		System.out.println(s);
 //		}
 		Makepayment pay = context.getBean(Makepayment.class);
-		pay.DoTranaction();
 		
-		Thread.sleep(5000);
-		Googlepe gp = context.getBean(Googlepe.class);
+		Makepayment pay2 = context.getBean(Makepayment.class);
+		System.out.println(pay.equals(pay2));
+		System.out.println(pay==(pay2));
 		
-		gp.doPayment();
-		
+//		pay.DoTranaction();
+//		
+//		Thread.sleep(5000);
+//		Googlepe gp = context.getBean(Googlepe.class);
+//		
+//		gp.doPayment();
+//		
 		
 		
 		

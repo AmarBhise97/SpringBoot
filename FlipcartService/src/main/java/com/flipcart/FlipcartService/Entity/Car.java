@@ -15,7 +15,7 @@ import org.springframework.web.context.annotation.SessionScope;
 //@Scope("prototype")//only change two tabs ore gives calss name
 //@RequestScope  //change even you gives the request
 //@SessionScope  //session scope when will session will change.
-@ApplicationScope//only change servalatrequest.
+//@ApplicationScope//only change servalatrequest.
 
 
 public class Car {

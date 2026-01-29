@@ -58,6 +58,13 @@ public class studentController {
 		return lst.get(0);
 		
 	}
+	@GetMapping("/adduser4/{na}")
+	public Stud getnamee(@PathVariable(value="na")String na) {
+		List<Stud>list=li.stream()
+				.filter(i->i.name.equals(na))
+				.collect(Collectors.toList());
+		    return list.get(0);
+	}
 	@PostMapping("/adduser4")
 	public String adduser(@RequestBody Stud stud) {
 		Stud std = new Stud();

@@ -1,16 +1,16 @@
 package com.jpMorgan.JPMorgan.Entity;
 
 public class Employee {
-	String name;
+	String Name;
 	String mobile;
 	double salary;
 	String id;
 	Company company;
 	public String getName() {
-		return name;
+		return Name;
 	}
 	public void setName(String name) {
-		this.name = name;
+		Name = name;
 	}
 	public String getMobile() {
 		return mobile;
@@ -36,7 +36,6 @@ public class Employee {
 	public void setCompany(Company company) {
 		this.company = company;
 	}
-	
 	
 	
 

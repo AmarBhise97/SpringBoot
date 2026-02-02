@@ -1,4 +1,4 @@
-package com.example.jpa.HibernetService.Controller;
+package com.Examanation.ExamanitionService.Controller;
 
 import java.util.List;
 
@@ -11,43 +11,35 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.jpa.HibernetService.Entity.Student;
-import com.example.jpa.HibernetService.Repository.Student_repository;
+import com.Examanation.ExamanitionService.ControllerRepository.Student_Info_repository;
+
+import com.Examanation.ExamanitionService.Entity.Student_Info;
 
 @RestController
 @RequestMapping("/student")
 public class StudentController {
 	
 	@Autowired
-	private Student_repository repo;
+	private Student_Info_repository repo;
 	
 	@PostMapping("/add")
-	public Student add(@RequestBody Student student) {
-		
+	public Student_Info add(@RequestBody Student_Info student) {
 		repo.save(student);
-	
-//		student.setId(student.getId());
-//		student.setName(student.getName());
-//		student.setAddress(student.getAddress());
-		return student;
+		return  student;
 	}
 	
-	
-	@GetMapping("/get")
-	public List<Student> get(){
-		
+	@GetMapping("/getall")
+	public List<Student_Info> getAll(){
 		return repo.findAll();
 	}
-	
 	@GetMapping("/getbyid/{id}")
-	public Student getbyid(@PathVariable("id") int id) {
+	public Student_Info getid(@PathVariable("id") int id) {
 		return repo.findById(id).get();
 	}
-	
-	@DeleteMapping("/deletebyid/{id}")
-	public String delete(@PathVariable("id") int id) {
-		repo.deleteById(id);
-		return "deleted successfully";
+	@DeleteMapping("deletebyid/{id}")
+	public String deleteid(@PathVariable("id")int id) {
+		 repo.deleteById(id);
+		 return "Delete Successfully.....";
 	}
 
 }

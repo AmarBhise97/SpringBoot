@@ -1,40 +1,30 @@
 package com.jpMorgan.JPMorgan.Entity;
 
 public class Company {
-	String Company_Name;
-	String Gst_Number;
+	String companyName;
+	String gstNumber;
 	double turnover;
-
-	public Company(String Company_Name,String Gst_Number,double turnover) {
-		this.Company_Name=Company_Name;
-		this.Gst_Number=Gst_Number;
-		this.turnover=turnover;
+	public String getCompanyName() {
+		return companyName;
 	}
-
-	public String getCompany_Name() {
-		return Company_Name;
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
 	}
-
-	public void setCompany_Name(String Company_Name) {
-		this.Company_Name = Company_Name;
+	public String getGstNumber() {
+		return gstNumber;
 	}
-
-	public String getGst_Number() {
-		return Gst_Number;
-
+	public void setGstNumber(String gstNumber) {
+		this.gstNumber = gstNumber;
 	}
-
-	public void setGst_Number(String Gst_Number) {
-		this.Gst_Number = Gst_Number;
-	}
-
 	public double getTurnover() {
 		return turnover;
 	}
-
 	public void setTurnover(double turnover) {
 		this.turnover = turnover;
 	}
+	
+	
+
 
 	
 }

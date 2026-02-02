@@ -1,17 +1,16 @@
-package com.example.jpa.HibernetService.Entity;
+package com.Examanation.ExamanitionService.Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-
 @Entity
-public class Student {
+public class Student_Info {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	int id;
 	String name;
-	String address;
+	String marks;
 	public int getId() {
 		return id;
 	}
@@ -24,13 +23,12 @@ public class Student {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getAddress() {
-		return address;
+	public String getMarks() {
+		return marks;
 	}
-	public void setAddress(String address) {
-		this.address = address;
+	public void setMarks(String marks) {
+		this.marks = marks;
 	}
-	
 	
 	
 

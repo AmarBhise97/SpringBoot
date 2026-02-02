@@ -1,15 +1,15 @@
 package com.jpMorgan.JPMorgan.DTO;
 
 public class EmployeeDto {
-	String name;
+	String Name;
 	String id;
-	String Company_Name;
-	String Gst_Number;
+	String companyName;
+	String gstNumber;
 	public String getName() {
-		return name;
+		return Name;
 	}
 	public void setName(String name) {
-		this.name = name;
+		this.Name = name;
 	}
 	public String getId() {
 		return id;
@@ -17,18 +17,19 @@ public class EmployeeDto {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getCompany_Name() {
-		return Company_Name;
+	public String getCompanyName() {
+		return companyName;
 	}
-	public void setCompany_Name(String company_Name) {
-		Company_Name = company_Name;
+	public void setCompanyName(String companyName) {
+		this.companyName = companyName;
 	}
-	public String getGst_Number() {
-		return Gst_Number;
+	public String getGstNumber() {
+		return gstNumber;
 	}
-	public void setGst_Number(String gst_Number) {
-		Gst_Number = gst_Number;
+	public void setGstNumber(String gstNumber) {
+		this.gstNumber = gstNumber;
 	}
+	
 	
 
 }

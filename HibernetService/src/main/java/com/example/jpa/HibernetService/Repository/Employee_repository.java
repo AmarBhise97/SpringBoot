@@ -6,4 +6,8 @@ import com.example.jpa.HibernetService.Entity.Employee;
 
 public interface Employee_repository extends JpaRepository<Employee, Integer> {
 
+	
+
+
+
 }

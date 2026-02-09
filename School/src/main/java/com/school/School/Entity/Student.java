@@ -1,5 +1,11 @@
 package com.school.School.Entity;
 
+import java.time.LocalDateTime;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -16,9 +22,28 @@ public class Student {
 	String studentname;
 	String studentmatks;
 	
+	
+	
+	
+	
+	
+
 	@JoinColumn(name="schoolid")
 	@ManyToOne
 	School school;
+	
+	@CreationTimestamp
+	private LocalDateTime time;
+	
+	
+
+	public LocalDateTime getTime() {
+		return time;
+	}
+
+	public void setTime(LocalDateTime time) {
+		this.time = time;
+	}
 
 	public int getStudentid() {
 		return studentid;

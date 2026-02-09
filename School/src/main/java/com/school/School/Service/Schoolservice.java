@@ -57,8 +57,27 @@ public class Schoolservice {
 	}
 	
 	
+	public String deleteid(int schoolid) {
+		
+		School sc = schoolrepo.findAll().get(schoolid);
+		schoolrepo.deleteById(schoolid);
+		
+		return " school " + sc.getSchoolname()+" "+sc.getAddress()+" ";
+	}
 	
 	
+	public List<School> getbyname(String name){
+		return schoolrepo.getbyname(name);
+	}
+	
+	public School updateaddress(String address,int schooluiid) {
+		School isupdate=schoolrepo.findById(schooluiid).orElseThrow(()-> new 
+				RuntimeException("Schoolid not found...."));
+		isupdate.setAddress(address);
+		//isupdate.
+		
+		return schoolrepo.save(isupdate);
+	}
 	
 
 }

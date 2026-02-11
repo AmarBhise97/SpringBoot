@@ -6,6 +6,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -29,8 +30,8 @@ public class Student {
 	
 
 	@JoinColumn(name="schoolid")
-	@ManyToOne
-	School school;
+	@ManyToOne(cascade = CascadeType.ALL)
+	 private School school;
 	
 	@CreationTimestamp
 	private LocalDateTime time;

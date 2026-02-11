@@ -74,7 +74,7 @@ public class Schoolservice {
 		School isupdate=schoolrepo.findById(schooluiid).orElseThrow(()-> new 
 				RuntimeException("Schoolid not found...."));
 		isupdate.setAddress(address);
-		//isupdate.
+		
 		
 		return schoolrepo.save(isupdate);
 	}

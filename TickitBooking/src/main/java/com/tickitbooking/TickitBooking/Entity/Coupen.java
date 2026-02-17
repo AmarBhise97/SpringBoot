@@ -11,7 +11,7 @@ public class Coupen {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int coupenid;
 	private String coupnename;
-	private String discount;
+	private int discount;
 	
 	public int getCoupenid() {
 		return coupenid;
@@ -25,10 +25,10 @@ public class Coupen {
 	public void setCoupnename(String coupnename) {
 		this.coupnename = coupnename;
 	}
-	public String getDiscount() {
+	public int getDiscount() {
 		return discount;
 	}
-	public void setDiscount(String discount) {
+	public void setDiscount(int discount) {
 		this.discount = discount;
 	}
 	

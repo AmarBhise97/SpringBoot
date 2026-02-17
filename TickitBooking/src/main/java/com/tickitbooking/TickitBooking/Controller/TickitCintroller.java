@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.tickitbooking.TickitBooking.DTO.TickitDto;
 import com.tickitbooking.TickitBooking.Entity.Tickit;
 import com.tickitbooking.TickitBooking.Service.Tickitservice;
 
@@ -18,13 +19,13 @@ public class TickitCintroller {
 	private Tickitservice service;
 	
 	@PostMapping("/addtickit")
-	public Tickit addTickit(@RequestBody Tickit tickit) throws Exception {
+	public TickitDto addTickit(@RequestBody Tickit tickit) throws Exception {
 		
 		return service.addTickit(tickit);
 		
 	}
 	@GetMapping("/gettickit")
-	public List<Tickit> ggetTickit(){
+	public List<TickitDto> ggetTickit(){
 		return service.gettickit();
 	}
 }

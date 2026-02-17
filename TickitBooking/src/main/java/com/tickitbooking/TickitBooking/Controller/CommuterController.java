@@ -3,6 +3,7 @@ package com.tickitbooking.TickitBooking.Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -25,7 +26,7 @@ public class CommuterController {
 	}
 	@GetMapping("/getcommuter")
 	public ResponseEntity<List<Commuter>> getcommuter(){
-		return service.getCommuter();
+		return new ResponseEntity(service.getCommuter(),HttpStatus.ACCEPTED);
 	}
 
 }

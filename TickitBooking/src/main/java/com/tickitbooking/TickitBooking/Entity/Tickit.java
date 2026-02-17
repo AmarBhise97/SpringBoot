@@ -10,6 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 
@@ -24,6 +25,11 @@ public class Tickit {
 	private String source;
 	private String distination;
     private double amount;
+    
+    private String mode;
+    private int discount;
+    
+    
 	public String getMode() {
 		return mode;
 	}
@@ -32,14 +38,15 @@ public class Tickit {
 		this.mode = mode;
 	}
 
-	private String mode;
 	
-	@OneToMany(mappedBy = "coupenid")
-	List<Coupen> coupen;
+	
+	@OneToOne
+	Coupen coupen;
 
-	@JoinColumn(name = "commuterid")
+	@JoinColumn(name="commuterid")
 	@ManyToOne
 	private Commuter commuter;
+	@OneToMany
 
 	public int getTickitid() {
 		return tickitid;
@@ -67,13 +74,7 @@ public class Tickit {
 		this.distination = distination;
 	}
 
-	public List<Coupen> getCoupen() {
-		return coupen;
-	}
-
-	public void setCoupen(List<Coupen> coupen) {
-		this.coupen = coupen;
-	}
+	
 
 	public Commuter getCommuter() {
 		return commuter;
@@ -90,6 +91,24 @@ public class Tickit {
 	public void setAmount(double amount) {
 		this.amount = amount;
 	}
+
+	public Coupen getCoupen() {
+		return coupen;
+	}
+
+	public void setCoupen(Coupen coupen) {
+		this.coupen = coupen;
+	}
+
+	public int getDiscount() {
+		return discount;
+	}
+
+	public void setDiscount(int discount) {
+		this.discount = discount;
+	}
+
+	
 	
 	
 

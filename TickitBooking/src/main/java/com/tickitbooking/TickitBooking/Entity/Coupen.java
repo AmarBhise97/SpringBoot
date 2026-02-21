@@ -4,6 +4,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Coupen {
@@ -12,6 +14,11 @@ public class Coupen {
 	private int coupenid;
 	private String coupnename;
 	private int discount;
+	
+	
+	@ManyToOne
+	@JoinColumn(name="tickitid")
+	 private Tickit tickit;
 	
 	public int getCoupenid() {
 		return coupenid;

@@ -81,6 +81,22 @@ public class School {
 		this.address = address;
 	}
 	
+	public Integer add(int a,int b) {
+		int c;
+		a=10;
+		b=20;
+		c=a+b;
+		return 30;
+	}
+	
+	public Integer multy(int a,int b) {
+		int c;
+		a=10;
+		b=10;
+	 c=a+b;
+		return 20;
+	}
+	
 	
 	
 	

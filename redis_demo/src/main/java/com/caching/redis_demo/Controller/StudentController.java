@@ -32,6 +32,7 @@ public class StudentController {
 	}
 
 	@GetMapping("/getstudent")
+	
 	@Cacheable(value = "students", key = "'all'")
 	public List<Student> getstudent() throws InterruptedException {
 		Thread.sleep(3000);

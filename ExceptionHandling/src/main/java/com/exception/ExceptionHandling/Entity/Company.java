@@ -5,6 +5,9 @@ import java.util.List;
 
 import org.hibernate.annotations.CreationTimestamp;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -29,7 +32,8 @@ public class Company {
 	@CreationTimestamp
 	LocalDateTime time;
 	
-	@OneToMany(mappedBy="company",cascade=CascadeType.PERSIST)
+	@OneToMany(mappedBy="company")
+	@JsonManagedReference
 	private List<Employee> employee;
 	
 	

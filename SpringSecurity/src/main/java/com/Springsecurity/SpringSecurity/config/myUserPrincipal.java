@@ -12,6 +12,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import com.Springsecurity.SpringSecurity.Entity.UserEntity;
 
 
+@SuppressWarnings("serial")
 public class myUserPrincipal implements UserDetails {
 
 	private UserEntity user;

@@ -59,7 +59,6 @@ public class CarService {
 			car.setAveraje(dto.getAveraje());
 			car.setTime(dto.getTime());
 			
-			
 			return car;
 		}).collect(Collectors.toList());
 		return li;

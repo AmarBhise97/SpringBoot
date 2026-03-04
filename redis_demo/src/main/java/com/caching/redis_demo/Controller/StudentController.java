@@ -1,11 +1,13 @@
 package com.caching.redis_demo.Controller;
 
+import java.io.Serializable;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,8 +20,13 @@ import com.caching.redis_demo.Entity.Student;
 import com.caching.redis_demo.Repository.Studentrepo;
 
 @RestController
-public class StudentController {
+@CrossOrigin(origins="*")
+public class StudentController implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	@Autowired
 	private Studentrepo repo;
 
@@ -32,10 +39,9 @@ public class StudentController {
 	}
 
 	@GetMapping("/getstudent")
-	
 	@Cacheable(value = "students", key = "'all'")
 	public List<Student> getstudent() throws InterruptedException {
-		Thread.sleep(3000);
+		Thread.sleep(10000);
 		System.out.println("getting the student");
 		return repo.findAll();
 	}

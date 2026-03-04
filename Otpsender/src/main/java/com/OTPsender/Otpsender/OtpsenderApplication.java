@@ -1,13 +1,13 @@
-package com.Springsecurity.SpringSecurity;
+package com.OTPsender.Otpsender;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringSecurityApplication {
+public class OtpsenderApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringSecurityApplication.class, args);
+		SpringApplication.run(OtpsenderApplication.class, args);
 	}
 
 }

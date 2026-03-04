@@ -1,10 +1,10 @@
-package com.Springsecurity.SpringSecurity;
+package com.OTPsender.Otpsender;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringSecurityApplicationTests {
+class OtpsenderApplicationTests {
 
 	@Test
 	void contextLoads() {

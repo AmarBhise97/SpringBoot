@@ -10,23 +10,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.Springsecurity.SpringSecurity.Entity.Bank;
-import com.Springsecurity.SpringSecurity.Service.BankService;
+import com.Springsecurity.SpringSecurity.Repository.BankRepository;
 
 @RestController
 @RequestMapping("/bank")
 public class BankController {
 	
 	@Autowired
-	private BankService bankservice;
+	private BankRepository bankservice;
 	
 	@PostMapping("/addbank")
 	public Bank addbanks(@RequestBody Bank bank) {
-		return bankservice.addBank(bank);
+		return bankservice.save(bank);
 	}
 	
 	@GetMapping("/getbank")
 	public List<Bank> getallBank(){
-		return bankservice.getbank();
+		return bankservice.findAll();
 	}
 	
 	

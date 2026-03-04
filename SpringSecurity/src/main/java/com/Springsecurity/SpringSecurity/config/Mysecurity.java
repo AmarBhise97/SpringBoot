@@ -23,22 +23,20 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class Mysecurity {
-	
+
 	@Autowired
-private 	myUserDetailService service;
-	
+	private myUserDetailService service;
+
 	@Bean
 	public SecurityFilterChain mysecur(HttpSecurity http) {
-	
-		return http.csrf((i)->i.disable())
-		.authorizeHttpRequests((req)-> req.requestMatchers(HttpMethod.POST).permitAll()
-				.requestMatchers(HttpMethod.GET).hasAuthority("ADMIN")
-				.anyRequest().authenticated())
-		.httpBasic(Customizer.withDefaults())
-		.build();
-		
+
+		return http.csrf((i) -> i.disable())
+				.authorizeHttpRequests((req) -> req.requestMatchers(HttpMethod.POST).permitAll()
+						.requestMatchers(HttpMethod.GET).hasAuthority("ADMIN").anyRequest().authenticated())
+				.httpBasic(Customizer.withDefaults()).build();
+
 	}
-	
+
 //	@Bean
 //	public UserDetailsService myuser() {
 //		List<SimpleGrantedAuthority> list = new ArrayList<SimpleGrantedAuthority>();
@@ -54,10 +52,10 @@ private 	myUserDetailService service;
 //		return new InMemoryUserDetailsManager(Amar,Ankit);
 //		
 //	}
-	
+
 	@Bean
 	public DaoAuthenticationProvider mydao() {
-		
+
 		DaoAuthenticationProvider provider = new DaoAuthenticationProvider(service);
 		provider.setPasswordEncoder(new BCryptPasswordEncoder(5));
 		return provider;

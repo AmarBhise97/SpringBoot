@@ -24,8 +24,8 @@ public class School {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="schooluniid")
-	
 	int schoolid;
+	
 	@Size(min=5,max=10,message="enter valid name....")
 	String schoolname;
 //	@Max(value=11 , message="inavlid number")

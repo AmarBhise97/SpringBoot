@@ -23,9 +23,7 @@ public class StudentService {
 		if(student.getStudentname().isBlank()) {
 			throw new Exception("Name is blank.....");
 		}
-		else if(!student .getStudentmatks().endsWith("%")) {
-			throw new Exception("please enter in persentage....");
-		}
+		
 		return studentrepo.save(student);
 	}
 	

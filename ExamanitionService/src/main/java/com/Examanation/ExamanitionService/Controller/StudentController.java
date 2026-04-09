@@ -41,5 +41,6 @@ public class StudentController {
 		 repo.deleteById(id);
 		 return "Delete Successfully.....";
 	}
+	
 
 }
